@@ -34,8 +34,8 @@ function insertList  (e) {
     createText.innerText = `${input.value}`
     createList.append (createText,createButtonEdit,createButtonSave,createButtonDelete)
 
+    // show to do list
     ulList.append (createList)
-    
     input.value = ''
 
     

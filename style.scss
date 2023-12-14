@@ -105,7 +105,16 @@ body{
                     }
 
 
-                    .edit,.save{
+                    .edit{
+                        margin-left :80px;
+
+                        
+                        @include mobile{
+                            margin-left: 40px;
+                        }
+                    }
+                    
+                    .save{
                         margin-left :80px;
 
                         
