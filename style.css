@@ -77,7 +77,7 @@ body {
   font-weight: 400px;
 }
 .main-container .inner-container .list-container ul li p {
-  width: 180px;
+  width: 230px;
   height: 30px;
   text-align: center;
   border-radius: 5px;
@@ -85,8 +85,13 @@ body {
   padding-top: 5px;
   cursor: default;
 }
-.main-container .inner-container .list-container ul li .edit {
+.main-container .inner-container .list-container ul li .edit, .main-container .inner-container .list-container ul li .save {
   margin-left: 80px;
+}
+@media (max-width: 768px) {
+  .main-container .inner-container .list-container ul li .edit, .main-container .inner-container .list-container ul li .save {
+    margin-left: 40px;
+  }
 }
 .main-container .inner-container .list-container ul li button {
   width: 80px;
