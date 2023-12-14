@@ -85,12 +85,17 @@ body {
   padding-top: 5px;
   cursor: default;
 }
+@media (max-width: 768px) {
+  .main-container .inner-container .list-container ul li p {
+    width: 180px;
+  }
+}
 .main-container .inner-container .list-container ul li .edit {
   margin-left: 80px;
 }
 @media (max-width: 768px) {
   .main-container .inner-container .list-container ul li .edit {
-    margin-left: 40px;
+    margin-left: 0px;
   }
 }
 .main-container .inner-container .list-container ul li .save {
@@ -98,7 +103,7 @@ body {
 }
 @media (max-width: 768px) {
   .main-container .inner-container .list-container ul li .save {
-    margin-left: 40px;
+    margin-left: 0px;
   }
 }
 .main-container .inner-container .list-container ul li button {

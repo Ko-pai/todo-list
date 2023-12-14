@@ -100,6 +100,10 @@ body{
                         padding-top: 5px;
                         cursor: default;
 
+                        @include mobile{
+                            width: 180px;
+                        }
+
                         
                         
                     }
@@ -110,7 +114,7 @@ body{
 
                         
                         @include mobile{
-                            margin-left: 40px;
+                            margin-left: 0px;
                         }
                     }
                     
@@ -119,7 +123,7 @@ body{
 
                         
                         @include mobile{
-                            margin-left: 40px;
+                            margin-left: 0px;
                         }
                     }
 
