@@ -137,6 +137,11 @@ body{
 
                         &:active{
                             background-color: rgb(83, 235, 227);
+
+
+                        }
+                        @include mobile{
+                            width: 60px;
                         }
                     }
 
