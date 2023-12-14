@@ -1,0 +1,15 @@
+$minWidth : 768px;
+$maxWidth : 900px;
+
+@mixin mobile {
+    @media (max-width : #{$minWidth}){
+        @content
+    }
+};
+
+
+@mixin pc {
+    @media (max-width : #{$maxWidth}){
+        @content
+    }
+}
