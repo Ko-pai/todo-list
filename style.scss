@@ -135,13 +135,14 @@ body{
                         color: white;
                         border-radius: 5px;
 
+                        @include mobile{
+                            width: 60px;
+                        }
+                        
                         &:active{
                             background-color: rgb(83, 235, 227);
 
 
-                        }
-                        @include mobile{
-                            width: 60px;
                         }
                     }
 

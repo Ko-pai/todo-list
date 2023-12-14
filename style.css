@@ -114,13 +114,13 @@ body {
   color: white;
   border-radius: 5px;
 }
-.main-container .inner-container .list-container ul li button:active {
-  background-color: rgb(83, 235, 227);
-}
 @media (max-width: 560px) {
   .main-container .inner-container .list-container ul li button {
     width: 60px;
   }
+}
+.main-container .inner-container .list-container ul li button:active {
+  background-color: rgb(83, 235, 227);
 }
 .main-container .inner-container .list-container ul li .save {
   display: none;
