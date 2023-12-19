@@ -55,11 +55,17 @@ body {
   height: 70%;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 @media (max-width: 560px) {
   .main-container .inner-container .list-container {
     width: 90%;
   }
+}
+.main-container .inner-container .list-container .errorText {
+  text-align: center;
+  font-size: 20px;
+  color: #eede4d;
 }
 .main-container .inner-container .list-container ul {
   width: 100%;
@@ -78,7 +84,7 @@ body {
 }
 .main-container .inner-container .list-container ul li p {
   width: 230px;
-  height: 30px;
+  height: auto;
   text-align: center;
   border-radius: 5px;
   transition: outline 10ms ease-in-out;
@@ -90,23 +96,24 @@ body {
     width: 180px;
   }
 }
-.main-container .inner-container .list-container ul li .edit {
-  margin-left: 80px;
+.main-container .inner-container .list-container ul li .buttonContainer {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 @media (max-width: 560px) {
-  .main-container .inner-container .list-container ul li .edit {
+  .main-container .inner-container .list-container ul li .buttonContainer .edit {
     margin-left: 0px;
   }
 }
-.main-container .inner-container .list-container ul li .save {
-  margin-left: 80px;
-}
 @media (max-width: 560px) {
-  .main-container .inner-container .list-container ul li .save {
+  .main-container .inner-container .list-container ul li .buttonContainer .save {
     margin-left: 0px;
   }
 }
-.main-container .inner-container .list-container ul li button {
+.main-container .inner-container .list-container ul li .buttonContainer button {
   width: 80px;
   height: 25px;
   border: none;
@@ -115,14 +122,14 @@ body {
   border-radius: 5px;
 }
 @media (max-width: 560px) {
-  .main-container .inner-container .list-container ul li button {
+  .main-container .inner-container .list-container ul li .buttonContainer button {
     width: 60px;
   }
 }
-.main-container .inner-container .list-container ul li button:active {
+.main-container .inner-container .list-container ul li .buttonContainer button:active {
   background-color: rgb(83, 235, 227);
 }
-.main-container .inner-container .list-container ul li .save {
+.main-container .inner-container .list-container ul li .buttonContainer .save {
   display: none;
 }
 @keyframes blink {

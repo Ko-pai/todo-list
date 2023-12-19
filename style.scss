@@ -1,170 +1,163 @@
 @import './global.scss';
 
-body{
-   
-    margin: 0;
-    padding: 0;
-
+body {
+  margin: 0;
+  padding: 0;
 }
-.main-container{
-    width: 100dvw;
-    height: 100dvh;
-    background: url("./night\ bg.jpg");
+.main-container {
+  width: 100dvw;
+  height: 100dvh;
+  background: url('./night\ bg.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+
+  .inner-container {
+    width: 100%;
+    height: 100%;
+    color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-position: center;
-    background-size: cover;
-    
+    backdrop-filter: blur(8px);
 
+    .input-container {
+      width: 70%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    .inner-container{
-        width: 100%;
-        height: 100%;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        backdrop-filter: blur(8px);
+      input {
+        width: 400px;
+        height: 30px;
+        border: none;
+        outline: skyblue;
+        border-radius: 5px;
+        padding-left: 10px;
+      }
 
-        .input-container{
-            width: 70%;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+      button {
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 40px;
 
-
-            input{
-                width: 400px;
-                height: 30px;
-                border: none;
-                outline: skyblue;
-                border-radius: 5px;
-                padding-left: 10px;
-
-            }
-
-            button{
-                width: 100px;
-                height: 30px;
-                border: none;
-                border-radius: 5px;
-                margin-left: 40px;
-
-                &:active{
-                    background-color: cornflowerblue;
-                    color: white;
-                    box-shadow: 0px 5px 10px rgba($color: #72c5e9, $alpha: 0.6);
-
-                }
-            }
+        &:active {
+          background-color: cornflowerblue;
+          color: white;
+          box-shadow: 0px 5px 10px rgba($color: #72c5e9, $alpha: 0.6);
         }
-
-        .list-container{
-            width: 35%;
-            height: 70%;
-            // background-color: sandybrown;
-            display: flex;
-            align-items: center;
-            
-            @include mobile{
-
-                
-                    width: 90%;
-                
-            }
-
-            ul{
-                width: 100%;
-                height: 90%;
-                list-style: none;
-                padding: 0;
-
-                li{ 
-                    height: 50px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                    font-weight: 400px;
-
-                    p{
-                        width: 230px;
-                        height: 30px;
-                        text-align: center;
-                       
-                        border-radius: 5px;
-                        transition: outline 10ms ease-in-out;
-                        padding-top: 5px;
-                        cursor: default;
-
-                        @include mobile{
-                            width: 180px;
-                        }
-
-                        
-                        
-                    }
-
-
-                    .edit{
-                        margin-left :80px;
-
-                        
-                        @include mobile{
-                            margin-left: 0px;
-                        }
-                    }
-                    
-                    .save{
-                        margin-left :80px;
-
-                        
-                        @include mobile{
-                            margin-left: 0px;
-                        }
-                    }
-
-                    button{
-                        width: 80px;
-                        height: 25px;
-                        border: none;
-                        background-color: rgb(7, 116, 167);
-                        color: white;
-                        border-radius: 5px;
-
-                        @include mobile{
-                            width: 60px;
-                        }
-                        
-                        &:active{
-                            background-color: rgb(83, 235, 227);
-
-
-                        }
-                    }
-
-                    .save{
-                        display: none;
-                    }
-
-
-                    @keyframes blink {
-                        0%,
-                        50%,
-                        100% {
-                            opacity: 1;
-                        }
-                    
-                        25%,
-                        75% {
-                            opacity: 0;
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+
+    .list-container {
+      width: 35%;
+      height: 70%;
+      // background-color: sandybrown;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @include mobile {
+        width: 90%;
+      }
+      .errorText {
+        text-align: center;
+        font-size: 20px;
+        color: #eede4d;
+      }
+      ul {
+        width: 100%;
+        height: 90%;
+        list-style: none;
+        padding: 0;
+
+        li {
+          height: 50px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+          font-weight: 400px;
+
+          p {
+            width: 230px;
+            height: auto;
+            text-align: center;
+
+            border-radius: 5px;
+            transition: outline 10ms ease-in-out;
+            padding-top: 5px;
+            cursor: default;
+
+            @include mobile {
+              width: 180px;
+            }
+          }
+
+          .buttonContainer {
+            width: 200px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .edit {
+              @include mobile {
+                margin-left: 0px;
+              }
+            }
+
+            .save {
+              
+
+              @include mobile {
+                margin-left: 0px;
+              }
+            }
+
+            button {
+              width: 80px;
+              height: 25px;
+              border: none;
+              background-color: rgb(7, 116, 167);
+              color: white;
+              border-radius: 5px;
+
+              @include mobile {
+                width: 60px;
+              }
+
+              &:active {
+                background-color: rgb(83, 235, 227);
+              }
+            }
+
+            .save {
+              display: none;
+            }
+
+            @keyframes blink {
+              0%,
+              50%,
+              100% {
+                opacity: 1;
+              }
+
+              25%,
+              75% {
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
